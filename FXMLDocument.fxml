@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox  id="VBox" prefHeight="400.0" prefWidth="370.0" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="javafxcalculator.FXMLDocumentController">
+  <children>
+    <MenuBar fx:id="Menu" prefHeight="29.0" prefWidth="345.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="closeButton"  onAction="#onClickClose" mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem fx:id="COPY" onAction="#onClickCopy" mnemonicParsing="false" text="Copy" />
+            
+            <MenuItem onAction="#onClickClear"  mnemonicParsing="false" text="Delete" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="ABOUT" onAction="#onClickAbout" mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+    </MenuBar>
+      <TextField fx:id="TEXTAREA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="345.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+      <GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="345.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="-Infinity" minWidth="45.0" prefWidth="70.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="-Infinity" minWidth="45.0" prefWidth="70.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="-Infinity" minWidth="45.0" prefWidth="70.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="-Infinity" minWidth="45.0" prefWidth="70.0" />
+          <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="-Infinity" minWidth="45.0" prefWidth="70.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="45.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="45.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="45.0" />
+          <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="45.0" />
+          <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="45.0" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="RSBRACE" mnemonicParsing="false" onAction="#onClickSBracesClose" prefHeight="39.0" prefWidth="62.0" text="]" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="NUM2" mnemonicParsing="false" onAction="#onClickNum2" prefHeight="39.0" prefWidth="62.0" text="2" GridPane.columnIndex="1" />
+            <Button fx:id="NUM3" mnemonicParsing="false" onAction="#onClickNum3" prefHeight="39.0" prefWidth="62.0" text="3" GridPane.columnIndex="2" />
+            <Button fx:id="DIVIDE" mnemonicParsing="false" onAction="#onClickDivide" prefHeight="39.0" prefWidth="62.0" text="/" GridPane.columnIndex="3" />
+            <Button fx:id="FCBRACE" mnemonicParsing="false" onAction="#onClickCBracesOpen" prefHeight="39.0" prefWidth="62.0" text="(" GridPane.columnIndex="4" />
+            <Button fx:id="NUM4"  mnemonicParsing="false" onAction="#onClickNum4" prefHeight="39.0" prefWidth="62.0" text="4" GridPane.rowIndex="1" />
+            <Button fx:id="NUM7"  mnemonicParsing="false" onAction="#onClickNum7" prefHeight="39.0" prefWidth="62.0" text="7" GridPane.rowIndex="2" />
+            <Button fx:id="PERIOD"  mnemonicParsing="false" onAction="#onClickPeriod" prefHeight="39.0" prefWidth="62.0" text="." GridPane.rowIndex="3" />
+            <Button fx:id="CALCULATE"  mnemonicParsing="false" onAction="#onClickCalculate" prefHeight="39.0" prefWidth="62.0" text="=" GridPane.rowIndex="4" />
+            <Button fx:id="NUM5"  mnemonicParsing="false" onAction="#OnClickNum5" prefHeight="39.0" prefWidth="62.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="NUM8"  mnemonicParsing="false" onAction="#onClickNum8" prefHeight="39.0" prefWidth="62.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="NUM0"  mnemonicParsing="false" onAction="#onClickNum0" prefHeight="39.0" prefWidth="62.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="CLEAR" mnemonicParsing="false" onAction="#onClickClear" prefHeight="39.0" prefWidth="62.0" text="C" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="NUM6"  mnemonicParsing="false" onAction="#onClickNum6" prefHeight="39.0" prefWidth="62.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="NUM9"  mnemonicParsing="false" onAction="#onClickNum9" prefHeight="39.0" prefWidth="62.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="PERCENTAGE" mnemonicParsing="false" onAction="#OnClickPercentage" prefHeight="39.0" prefWidth="62.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="MULTIPLY"  mnemonicParsing="false" onAction="#onClickMultiply" prefHeight="39.0" prefWidth="62.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="ADD"  mnemonicParsing="false" onAction="#onClickAdd" prefHeight="39.0" prefWidth="62.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="RCBRACE"  mnemonicParsing="false" onAction="#onClickCBracesClose" prefHeight="39.0" prefWidth="62.0" text=")" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="FFBRACE"  mnemonicParsing="false" onAction="#onClickFBracesOpen" prefHeight="39.0" prefWidth="62.0" text="{" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="FSBRACE"  mnemonicParsing="false" onAction="#onClickSBracesOpen" prefHeight="39.0" prefWidth="62.0" text="[" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="SUB" mnemonicParsing="false" onAction="#onClickSubtract" prefHeight="39.0" prefWidth="62.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="SQUARE" mnemonicParsing="false" onAction="#onClickSquare" prefHeight="39.0" prefWidth="62.0" text="^" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="RFBRACE"  mnemonicParsing="false" onAction="#onClickFBracesClose" prefHeight="39.0" prefWidth="62.0" text="}" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="NUM1" mnemonicParsing="false" onAction="#onClickNum1" prefHeight="39.0" prefWidth="62.0" text="1" />
+         </children>
+      </GridPane>
+  </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+</VBox>
